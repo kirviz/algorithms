@@ -61,14 +61,14 @@ def fast_is_prime(n):
     >>> fast_is_prime(19)
     True
     """
-    if n == 1:return False
+    if n == 1: return False
     if n == 2: return True
     if n % 2 == 0: return False
     if n < 8: return True
     if n % 3 == 0: return False
 
     # n is a prime if there is no divisor smaller than sqrt(n)
-    limit = int(sqrt(n))
+    limit = int(sqrt(n)) + 1
 
     # any prime higher than 3 can be written as f = 6*k +/- 1
     f = 5
